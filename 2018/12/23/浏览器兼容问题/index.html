@@ -71,6 +71,8 @@
     <link rel="preload" href= /css/style.css?v=20180709 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180709 media="(max-width: 980px)">
     
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -194,12 +196,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >guozhi&#39;s home.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name"></a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>guozhi's home.</a>
 </header>
@@ -213,24 +226,68 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            [Untitled Post]
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count">236</span> / Reading time: <span class="post-count">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/12/23</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -333,45 +390,51 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="个人技能"><a href="#个人技能" class="headerlink" title="个人技能"></a>个人技能</h3><ul>
-<li>熟悉Git工作流，能与团队更好的相处配合工作；</li>
-<li>自学Python、flask,能运用所学进行团队合作和开发，部分代码存放地址：<a href="https://github.com/guozhi666/python" target="_blank" rel="noopener">https://github.com/guozhi666/python</a></li>
-<li>对MySQL数据库的基础操作以及相关命令有一定的了解</li>
-<li>自学JavaScript、HTML、CSS，对前端页面开发有一定的了解</li>
-<li>了解基础的爬虫知识，对爬虫和反反爬虫有一些了解</li>
-<li>熟练使用Word、Excel等办公工具</li>
-</ul>
-<h3 id="实践经历"><a href="#实践经历" class="headerlink" title="实践经历"></a>实践经历</h3><ul>
-<li>2015.9-2016.6 担任学习委员，负责班级的有关学习工作</li>
-<li>2015.9-2017.6 担任辅导员助理，协助辅导员处理学院的相关学习事务</li>
-<li>2017.5 协助班级同学一起创建“一团毛线”协会，并担任副会长</li>
-<li>2016.12 获取计算机二级证书</li>
-<li>2018.5 获取机动车驾驶证</li>
-</ul>
-<h3 id="社团经验"><a href="#社团经验" class="headerlink" title="社团经验"></a>社团经验</h3><ul>
-<li><p>大一与大二担任班级学委兼辅导员助理，主要协助辅导员收集整理学院同学的学习材料以及学院的考勤情况，每天记录各专业班级考勤情况，每周做一次汇总，发现问题并及时反馈给辅导员，每月做一次大汇总。</p>
-<p>经过汇总发现迟到旷课情况比较严重，以及部分班级负责人不负责任的现象，为解决此问题，协同辅导员及各班学委成立督察小组，以周为单位，不定期对各个班级进行考勤抽查，抽查结果公布于信息院公示栏并对多次违纪同学给予期末综合测评扣分等处分。进过一个月的督查，迟到旷课人数明显下降。</p>
-</li>
-<li><p>大三期间协助班级同学创建“一团毛线”协会,并担任该协会副会长</p>
-<p>在协会成立阶段，我主要负责宣传和招收社团成员的任务，为了使全校多数师生了解“一团毛线”社团，我协同另一位同学制作宣传海报以及需要分发的传单，并确定宣传标语“种一棵树，最好的时间是十年前；学一门手艺，最好的时间就是现在”。在申请招收成员通过并经过社区辅导员同意后，我们一同把招收海报张贴于各处公示栏，并深入社区学生宿舍发放传单和讲解。</p>
-<p>为响应信息工程学院“暖冬行动之‘做个礼物’”主题活动，组织协会成员利用课余及周末时间制作大量手工艺品，因临近圣诞节，故其中多数作品以圣诞节为主题。在所有作品制作完成后，全部赠与市医院的儿童患者，安抚术前的患儿，减轻手术给他们带来的焦虑和恐惧。</p>
-</li>
-<li><p>关于我</p>
-<ul>
-<li>联系人：李国志</li>
-<li>邮箱：<a href="mailto:guo_zhi_666@163.com" target="_blank" rel="noopener">guo_zhi_666@163.com</a></li>
-<li>qq: 326050290</li>
-</ul>
-</li>
-</ul>
+        <h1 id="浏览器兼容性问题（一）"><a href="#浏览器兼容性问题（一）" class="headerlink" title="浏览器兼容性问题（一）"></a>浏览器兼容性问题（一）</h1><h2 id="兼容性封装-textContent-amp-innertext"><a href="#兼容性封装-textContent-amp-innertext" class="headerlink" title="兼容性封装 textContent &amp; innertext"></a>兼容性封装 textContent &amp; innertext</h2><p>因为innerText 是早期微软给IE设计的属性，textContent 是后来新出的属性，目前高级浏览器基本使用的都是textContent属性，但此属性不支持IE8及以下的低版本，因此要进行兼容性处理，以便网页适应各版本浏览器。</p>
+<pre><code>&lt;button id=&quot;btn&quot;&gt;按钮&lt;/button&gt;
+&lt;div id=&quot;box&quot;&gt;我是一个盒子&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var btn = document.getElementById(&apos;btn&apos;);
+    var box = document.getElementById(&apos;box&apos;);
+
+    btn.onclick = function(){
+        console.log();
+    }
+        /**
+    * 兼容性封装读取innerText属性函数
+    * @param {元素对象} obj
+    */
+    function getInnerText(obj) {
+        //高级浏览器能用textContent
+        if(obj.textContent) {
+            //将读取的属性的值返回出函数
+            return obj.textContent;
+        } else {
+                return obj.innerText;
+        }
+    }
+    /**
+    * 兼容性封装设置innerText属性函数
+    * @param {元素对象} obj
+    * @param {内容} txt
+    */
+    function setInnerText(obj,txt){
+        if(obj.textContent){
+            obj.textContent = txt;
+        }else{
+            obj.innerText = txt;
+        }
+    }
+&lt;/script&gt;
+</code></pre><h2 id="兼容性封装第一个子节点"><a href="#兼容性封装第一个子节点" class="headerlink" title="兼容性封装第一个子节点"></a>兼容性封装第一个子节点</h2><h3 id="节点介绍："><a href="#节点介绍：" class="headerlink" title="节点介绍："></a>节点介绍：</h3><p>节点（node):</p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者: <a href="http://guozhi666.github.io">guozhi</a>
-            <p>原文链接: <a href="http://guozhi666.github.io/about/index.html">http://guozhi666.github.io/about/index.html</a>
-            <p>发表日期: <a href="http://guozhi666.github.io/about/index.html">December 22nd 2018, 8:55:57 pm</a>
+            <p>原文链接: <a href="http://guozhi666.github.io/2018/12/23/浏览器兼容问题/">http://guozhi666.github.io/2018/12/23/浏览器兼容问题/</a>
+            <p>发表日期: <a href="http://guozhi666.github.io/2018/12/23/浏览器兼容问题/">December 23rd 2018, 3:39:40 pm</a>
             <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -381,6 +444,11 @@
             
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/12/22/hello-world/" title= Hello World >
+                    <div class="prevTitle">Hello World</div>
+                </a>
             
         </li>
     </ul>
@@ -482,6 +550,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#浏览器兼容性问题（一）"><span class="toc-number">1.</span> <span class="toc-text">浏览器兼容性问题（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性封装-textContent-amp-innertext"><span class="toc-number">1.1.</span> <span class="toc-text">兼容性封装 textContent &amp; innertext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性封装第一个子节点"><span class="toc-number">1.2.</span> <span class="toc-text">兼容性封装第一个子节点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#节点介绍："><span class="toc-number">1.2.1.</span> <span class="toc-text">节点介绍：</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -635,6 +721,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
