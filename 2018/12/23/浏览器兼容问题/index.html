@@ -261,7 +261,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">209</span> / Reading time: <span class="post-count">1 min</span></span>
+                        <span>Word count: <span class="post-count">392</span> / Reading time: <span class="post-count">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -391,42 +391,9 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <h2 id="兼容性封装-textContent-amp-innertext"><a href="#兼容性封装-textContent-amp-innertext" class="headerlink" title="兼容性封装 textContent &amp; innertext"></a>兼容性封装 textContent &amp; innertext</h2><p>因为innerText 是早期微软给IE设计的属性，textContent 是后来新出的属性，目前高级浏览器基本使用的都是textContent属性，但此属性不支持IE8及以下的低版本，因此要进行兼容性处理，以便网页适应各版本浏览器。</p>
-<pre><code>&lt;button id=&quot;btn&quot;&gt;按钮&lt;/button&gt;
-&lt;div id=&quot;box&quot;&gt;我是一个盒子&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    var btn = document.getElementById(&apos;btn&apos;);
-    var box = document.getElementById(&apos;box&apos;);
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">  &lt;button id=<span class="string">"btn"</span>&gt;按钮&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">  &lt;div id="box"&gt;我是一个盒子&lt;/</span>div&gt;</span><br><span class="line">  &lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">      <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span><br><span class="line">      <span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"></span><br><span class="line">      btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log();</span><br><span class="line">      &#125;</span><br><span class="line">          <span class="comment">/**</span></span><br><span class="line"><span class="comment">* 兼容性封装读取innerText属性函数</span></span><br><span class="line"><span class="comment">* @param &#123;元素对象&#125; obj</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getInnerText</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">	<span class="comment">//高级浏览器能用textContent</span></span><br><span class="line">	<span class="keyword">if</span>(obj.textContent) &#123;</span><br><span class="line">		<span class="comment">//将读取的属性的值返回出函数</span></span><br><span class="line">		<span class="keyword">return</span> obj.textContent;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> obj.innerText;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 兼容性封装设置innerText属性函数</span></span><br><span class="line"><span class="comment">* @param &#123;元素对象&#125; obj</span></span><br><span class="line"><span class="comment">* @param &#123;内容&#125; txt</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setInnerText</span>(<span class="params">obj,txt</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(obj.textContent)&#123;</span><br><span class="line">		obj.textContent = txt;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		obj.innerText = txt;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="兼容性封装另一个绑定事件的方式"><a href="#兼容性封装另一个绑定事件的方式" class="headerlink" title="兼容性封装另一个绑定事件的方式"></a>兼容性封装另一个绑定事件的方式</h2><p>常用的第一种事件绑定方式为：obj.事件类型 = 绑定事件 的形式；另一种绑定方式为：obj.addEvementListener(‘不带on的事件类型’， 函数体， 事件阶段)，这种绑定方式支持给一对象同时绑定多个相同事件类型，会顺序进行，但此方法不支持IE8及以下版本。<br>而 obj.attachEvent(‘带on的事件类型’， 函数体)则支持IE10及以下版本，但是当绑定多个相同事件类型时，会乱序执行。</p>
 
-    btn.onclick = function(){
-        console.log();
-    }
-        /**
-    * 兼容性封装读取innerText属性函数
-    * @param {元素对象} obj
-    */
-    function getInnerText(obj) {
-        //高级浏览器能用textContent
-        if(obj.textContent) {
-            //将读取的属性的值返回出函数
-            return obj.textContent;
-        } else {
-                return obj.innerText;
-        }
-    }
-    /**
-    * 兼容性封装设置innerText属性函数
-    * @param {元素对象} obj
-    * @param {内容} txt
-    */
-    function setInnerText(obj,txt){
-        if(obj.textContent){
-            obj.textContent = txt;
-        }else{
-            obj.innerText = txt;
-        }
-    }
-&lt;/script&gt;
-</code></pre>
     </article>
     <!-- license  -->
     
@@ -440,6 +407,11 @@ height:50vh;
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/02/21/移动端开发常见问题（一）/" title= 移动端布局常见问题（一） >
+                    <div class="nextTitle">移动端布局常见问题（一）</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -565,7 +537,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性封装-textContent-amp-innertext"><span class="toc-number">1.</span> <span class="toc-text">兼容性封装 textContent &amp; innertext</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性封装-textContent-amp-innertext"><span class="toc-number">1.</span> <span class="toc-text">兼容性封装 textContent &amp; innertext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性封装另一个绑定事件的方式"><span class="toc-number">2.</span> <span class="toc-text">兼容性封装另一个绑定事件的方式</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -616,9 +588,22 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 4
+        Total : 5
         </div>
         <!-- search  -->
         
@@ -628,6 +613,20 @@ top:50vh;
     
     
     
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2019/02/21/移动端开发常见问题（一）/" >移动端布局常见问题（一）</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
