@@ -339,6 +339,38 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/03/19/闭包/" >
+            
+                <span>闭包</span>
+        </a>
+        <div class="abstract-content">
+            1.如何产生闭包？
+
+两个函数嵌套
+内部函数引用了外部函数的局部变量
+执行外部函数的过程中产生了闭包
+
+
+ 探讨1：执行外部函数时具体哪个阶段产生了闭包？
+
+是内部函数对象产生（也就是执行内部函数定义时）的时候，产生的闭包。12345678910111213function fn1() &#123;    //执行到该行时，就产生了闭包。    //因为fn2是使用了function关键字定义，刚执行fn1时，会存在预解析，预解析此时已经执行了fn2的定义，所以闭包产生。    var a = 2    function fn2() &#123;        a++        co...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/19</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/02/21/移动端开发常见问题（一）/" >
             
                 <span>移动端布局常见问题（一）</span>
@@ -612,9 +644,22 @@ More...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 6
         </div>
         <!-- search  -->
         
@@ -627,6 +672,11 @@ More...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/19</span><a class="archive-post-title" href= "/2019/03/19/闭包/" >闭包</a>
+        </li>
     
     
         <li class="archive-post-item">
